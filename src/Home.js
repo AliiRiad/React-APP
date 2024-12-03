@@ -21,7 +21,8 @@ export default function Home() {
         onChange={(e) => setVille(e.target.value)}
       >
         <option value="">Votre Ville</option>
-        <option></option>
+        {villes.map(elem=>
+            <option value={elem}>{elem}</option>)}
       </select>
       <button onClick={() => dispatch({ type: 'filter', ville: ville })}>
         Filtrer
